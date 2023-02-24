@@ -37,14 +37,13 @@ export class MovieDetailsComponent implements OnInit{
           this.getMovieVideoResult=element.key
         }
       });
-      // this.getMovieVideoResult=result;
     })
   }
 
   getMovieCast(id:any){
     this.service.getMovieCast(id).subscribe((result)=>{
       console.log(result+"getMovieCast");
-      this.getMovieCastResult=result;
+      this.getMovieCastResult=result.cast;
     })
   }
 }
